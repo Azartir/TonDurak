@@ -1,0 +1,996 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.22f1 (887be4894c44) revision 8944612'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 32699 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+E:\Programs\Unity\Editor\2022.3.22f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/Projects/TonDurakTest
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56967
+Successfully changed project path to: E:/Projects/TonDurakTest
+E:/Projects/TonDurakTest
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [22668] Host "[IP] 192.168.1.91 [Port] 0 [Flags] 2 [Guid] 2122955279 [EditorId] 2122955279 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-FJJKP0J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [22668] Host "[IP] 192.168.1.91 [Port] 0 [Flags] 2 [Guid] 2122955279 [EditorId] 2122955279 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-FJJKP0J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 27.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.22f1 (887be4894c44)
+[Subsystems] Discovering subsystems at path E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Projects/TonDurakTest/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2489)
+    Vendor:   NVIDIA
+    VRAM:     8024 MB
+    Driver:   31.0.15.5161
+Initialize mono
+Mono path[0] = 'E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56004
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: E:/Programs/Unity/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.021611 seconds.
+- Loaded All Assemblies, in  0.572 seconds
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 475 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.978 seconds
+Domain Reload Profiling: 1549ms
+	BeginReloadAssembly (181ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (96ms)
+	LoadAllAssembliesAndSetupDomain (223ms)
+		LoadAssemblies (181ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (218ms)
+			TypeCache.Refresh (216ms)
+				TypeCache.ScanAssembly (195ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (978ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (895ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (659ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (160ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Assembly 'Library/ScriptAssemblies/Assembly-CSharp.dll' will not be loaded due to errors:
+Unable to resolve reference 'Alteruna.Trinity'. Is the assembly missing or incompatible with the current platform?
+Reference validation can be disabled in the Plugin Inspector.
+Unable to resolve reference 'Alteruna.TrinityEditor'. Is the assembly missing or incompatible with the current platform?
+Reference validation can be disabled in the Plugin Inspector.
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  4.086 seconds
+Refreshing native plugins compatible for Editor in 5.33 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.092 seconds
+Domain Reload Profiling: 5177ms
+	BeginReloadAssembly (228ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (3714ms)
+		LoadAssemblies (3546ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (306ms)
+			TypeCache.Refresh (274ms)
+				TypeCache.ScanAssembly (245ms)
+			ScanForSourceGeneratedMonoScriptInfo (24ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1093ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (873ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (64ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (89ms)
+			ProcessInitializeOnLoadAttributes (677ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 4.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3227 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (62.2 KB). Loaded Objects now: 3682.
+Memory consumption went from 133.9 MB to 133.9 MB.
+Total: 6.693300 ms (FindLiveObjects: 0.374100 ms CreateObjectMapping: 0.149900 ms MarkObjects: 5.952500 ms  DeleteObjects: 0.215600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CardsDealer.cs: 8ac51a3c0c387f447e84be3a86f7447b -> 
+  custom:scripting/monoscript/fileName/BasePlayerView.cs: 04e9c7de31016324a3fdffe90870c0c0 -> 
+  custom:scripting/monoscript/fileName/RoomDataSaver.cs: 1caacf0391a7601f1c3aa8658e3aa74e -> 
+  custom:scripting/monoscript/fileName/CardsInventoryHandler.cs: ff98dca147cd0dd0061edbbb857a6884 -> 
+  custom:scripting/monoscript/fileName/TakingCardsHandler.cs: 44d2f676533a7f06f16c09604f9f2fdb -> 
+  custom:scripting/precompiled-assembly-types:Alteruna.TrinityEditor: f5ea3937d690111f3fae081f6e338370 -> 
+  custom:scripting/monoscript/fileName/ExampleRpcProcedureParameters.cs: 8006dab72d3c5ee713ee7bdab83bd367 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/CardsLayout.cs: eff4b3aaa9f0d71ec19c17587e62cf7c -> 
+  custom:scripting/monoscript/fileName/MapDescriptions.cs: dcd4ad2f82c269008ba8ebdac8729125 -> 
+  custom:scripting/monoscript/fileName/GameManager.cs: 5010e97345969980589c4a0744278260 -> 
+  custom:scripting/monoscript/fileName/TakeButtonHandler.cs: 1f2b9b39b352060df67c10ebd06bb150 -> 
+  custom:scripting/monoscript/fileName/MultiplayerHandler.cs: 242b478d78c11a5dc25361b676b967e3 -> 
+  custom:scripting/monoscript/fileName/BaseSelectButton.cs: 6ca6a7903476529750299424a1993e44 -> 
+  custom:scripting/monoscript/fileName/PlayersAssigner.cs: b6c65abe3896c7a95a0e5f957ebc9809 -> 
+  custom:scripting/monoscript/fileName/JWTTaker.cs: adc4884fdd6a02fa722ca57460247339 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TrashView.cs: 2cfbc4842fc5649235743e01d3730597 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/NetworkCardData.cs: dda450dba202858bb99f0e5aa0962d24 -> 
+  custom:scripting/monoscript/fileName/CommandTarget.cs: 1607969702e055d433bdcd8d50744d0d -> 
+  custom:scripting/monoscript/fileName/NetworkConverter.cs: 82cd12050fe90ad1678d42995eb02771 -> 
+  custom:scripting/monoscript/fileName/GameSceneLoading.cs: c2d4a02aed9ed8ff086207aadeb9f7ed -> 
+  custom:scripting/monoscript/fileName/GameTypeSelectButton.cs: 332c677431ce43f5522a96afce8e7fc1 -> 
+  custom:scripting/monoscript/fileName/TableCardsView.cs: 963fb9021261217af4d750f5acb97d61 -> 
+  custom:scripting/monoscript/fileName/CardData.cs: 399fa9a6a55a568136b24c04fd07ed5c -> 
+  custom:scripting/monoscript/fileName/GameTypeMarker.cs: 1862cc1fde436b59e8c9bfb428aac1c9 -> 
+  custom:scripting/monoscript/fileName/OtherPlayerView.cs: 7d589fb007d3a035647d3f2231f67b16 -> 
+  custom:scripting/monoscript/fileName/RoomBrowserRow.cs: 0263fbf2f840a2609629f8a1ac39c37e -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/GlobalCardsContainer.cs: 1bc4c2eece27a4da86690f3bd2e47fae -> 
+  custom:scripting/monoscript/fileName/CommandRotate.cs: 61842fcb42c85bfd3b1fbdee29de2669 -> 
+  custom:scripting/monoscript/fileName/ExampleRpcSerializable.cs: 9318e9e416f58c1d2408e785e5523099 -> 
+  custom:scripting/monoscript/fileName/MapInfoDrawer.cs: 877c3dfe10d41fcfb1c07cd0544f93ce -> 
+  custom:scripting/monoscript/fileName/AlterunaViewDisabler.cs: eeceb2d722404cb0df1f85e623e59b50 -> 
+  custom:scripting/monoscript/fileName/PlayerButtonsView.cs: dd8e4f6ac0faf0381258c7b8fc54b122 -> 
+  custom:scripting/monoscript/fileName/MatchmakingMenu.cs: 66331c0978b309d0aa92d3e9f690d3c0 -> 
+  custom:scripting/monoscript/fileName/PlayerHandler.cs: 8f6c48bff78d1146bdf2637d02ca276f -> 
+  custom:scripting/monoscript/fileName/CommandTp.cs: 9f051748461ff63322509c81ed0a98f4 -> 
+  custom:scripting/monoscript/fileName/CustomRoomInfo.cs: f18724d40544d4bfd903f99fa9f029d8 -> 
+  custom:scripting/monoscript/fileName/StatusPopup.cs: d02f2aaf41ebae1192abcf26b104df48 -> 
+  custom:scripting/monoscript/fileName/GameEventsContainer.cs: 46b29c1b37707cfd0b27f02c26830c3d -> 
+  custom:scripting/monoscript/fileName/RoomBrowserSortButton.cs: 4e7817bf86329267a4907781c3589ac7 -> 
+  custom:scripting/monoscript/fileName/RoomMarker.cs: 614aae13d5f61b8fe245e1bb2bb5310c -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/WinView.cs: 52c7c30285df880447240c8b763b2866 -> 
+  custom:scripting/monoscript/fileName/OtherPlayerButtonsView.cs: d95433824acdbeca1736ee452b2b1838 -> 
+  custom:scripting/monoscript/fileName/PasswordPopup.cs: 15bd0f1c9278d85bc8450e2488a0c07a -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/BidSelectButton.cs: 7f30efc7c557e3c7b5deef905cf42d82 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/RoomsListView.cs: 3dfcf07bdc9a73f5171f3f0b8e5cf0d3 -> 
+  custom:scripting/monoscript/fileName/PlayerActionsView.cs: 3c0a03ec050bc5f31409f302f12cdd41 -> 
+  custom:scripting/monoscript/fileName/GlobalEventsContainer.cs: ae93e1759aa87854320311b52f80d6b7 -> 
+  custom:scripting/monoscript/fileName/ActionButton.cs: 71d2e65a99c949992886df8d8b1da776 -> 
+  custom:scripting/monoscript/fileName/CreateRoomMenu.cs: cf73dac2e453083dc1bfca39006ee7b2 -> 
+  custom:scripting/monoscript/fileName/EndMoveButtonHandler.cs: e7ad92c942734863ca671b64f4de181d -> 
+  custom:scripting/monoscript/fileName/MatchmakingEntry.cs: 6715287caa344ee3456b07d577996de1 -> 
+  custom:scripting/monoscript/fileName/CardPlaceHandler.cs: b64abb258802cf4edfbc7b5a12ce53d1 -> 
+  custom:scripting/monoscript/fileName/RoomCreator.cs: c27c988eb51de60ee227b1debf873447 -> 
+  custom:scripting/monoscript/fileName/TableCardsHandler.cs: e498d8fe912e53d1083e1ac477aedd9b -> 
+  custom:scripting/monoscript/fileName/BaseRoomBrowserEditor.cs: 1ff4f286c8272ed53477fb34307da543 -> 
+  custom:scripting/monoscript/fileName/RoomData.cs: 2691cdb3090cd1d1fc9e88811cf4e6a4 -> 
+  custom:scripting/monoscript/fileName/BaseGameButton.cs: bf06f48d64a640915cbc8516a867055e -> 
+  custom:scripting/monoscript/fileName/NetworkTableCardData.cs: c73be535d2ab6c2561abaa7b706885fd -> 
+  custom:scripting/monoscript/fileName/TableCardView.cs: db5a39adb097756d952e9d87a3dcdf9c -> 
+  custom:scripting/precompiled-assembly-types:Alteruna.Trinity: 47c59bb0dd9a9537eab7e788c29e2226 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/RoomBrowser.cs: 0dc569d01367f01d2987a75076205ee3 -> 
+  custom:scripting/monoscript/fileName/CardView.cs: c8a0ecd6cbf4dacb79002ae047118070 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CommandUid.cs: fb68427bf59668efbec3ee511a571de2 -> 
+  custom:scripting/monoscript/fileName/CommandSync.cs: 3608745329e4e2ba889fcd797d35fe5f -> 
+  custom:scripting/monoscript/fileName/NetworkPlayerData.cs: 971119da9990a695309e6465d8062387 -> 
+  custom:scripting/monoscript/fileName/PlayerViewsConnector.cs: 07301024063f91103db63a4213f631c1 -> 
+  custom:scripting/monoscript/fileName/ExampleSynchronizable.cs: f2afc1e4f3db0a5e002f1c32a9fcbfab -> 
+  custom:scripting/monoscript/fileName/DeckView.cs: b914c03e0bc351402a5cc1d894441451 -> 
+  custom:scripting/monoscript/fileName/WinHandler.cs: d2bee544d2d10a5a6b7110a11535ff7d -> 
+  custom:scripting/monoscript/fileName/PlayersContainer.cs: 2bdd74635bf88142bbc8b8bf017def6a -> 
+  custom:scripting/monoscript/fileName/ClickableCardHandler.cs: 305753f0a92def1ba5ca51ada3137985 -> 
+  custom:scripting/monoscript/fileName/ExampleAttributeRpc.cs: b489c4647cb0a052a15139023f6d7c36 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor: d9eab57c7710bcf00152a15191d5f5dc -> 
+  custom:scripting/monoscript/fileName/LobbyManager.cs: 38b152ac9d9b8a05a1bd96c6f45d693f -> 
+  custom:scripting/monoscript/fileName/CommandScale.cs: 1b7e84502815dca2acf0eafb643b3313 -> 
+  custom:scripting/monoscript/fileName/MyPlayerView.cs: 456f54b6fb13addeb3a4acab08e24e96 -> 
+  custom:scripting/monoscript/fileName/PlayerCardsView.cs: c45b7749011d83721043ef3a376d963f -> 
+  custom:scripting/monoscript/fileName/ITextChatCommand.cs: a27761eebea2661884dad56ef5a7d75d -> 
+  custom:scripting/monoscript/fileName/TextChatSynchronizable.cs: bad9839a07c2384c313289cd8eb47ebd -> 
+  custom:scripting/monoscript/fileName/BaseRoomBrowser.cs: a6f22eb18ee1e50732ac642ecce5191f -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 98b8dd3533dfe07fe8a5c7716ed42dcd -> 
+  custom:scripting/monoscript/fileName/CommandLoadScene.cs: f88875058067fd84195254d01c01bdd9 -> 
+  custom:scripting/monoscript/fileName/RoomMenu.cs: 2e10133974671fba816cfb78d5db6d3b -> 
+  custom:scripting/monoscript/fileName/CommandMove.cs: df7ef5461e8ac8ce593db2a19d311360 -> 
+  custom:scripting/monoscript/fileName/RoomView.cs: f73e0412653f4e7182a5bd23471a76d5 -> 
+  custom:scripting/monoscript/fileName/PlayersCountSelectButton.cs: 812c36027a88512e11a80aecb4bbefa1 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 45149.948650 seconds.
+  path: Assets/Scripts/CardsInventorySystem/CardsSystem
+  artifactKey: Guid(2a572cfbc9a44f81961871b6ef1cea2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/CardsSystem using Guid(2a572cfbc9a44f81961871b6ef1cea2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e860e2b107dea21d0637c3c68c6ecc0') in 0.003815 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.391510 seconds.
+  path: Assets/Scripts/CardsInventorySystem/CardsSystem/CardData.cs
+  artifactKey: Guid(874456a8cd6d45a68b6da6b94d032eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/CardsSystem/CardData.cs using Guid(874456a8cd6d45a68b6da6b94d032eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0837e39cf38a1ffa5a99c2cdf1faa0f') in 0.000580 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.545438 seconds.
+  path: Assets/Scripts/CardsInventorySystem/CardsSystem/CardType.cs
+  artifactKey: Guid(75c605bca3a145358c7d8d31756b541b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/CardsSystem/CardType.cs using Guid(75c605bca3a145358c7d8d31756b541b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de80adadccb114c716f248277450614') in 0.000576 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.575722 seconds.
+  path: Assets/Scripts/CardsInventorySystem/View
+  artifactKey: Guid(51de17d139724b1ba02a64796d5da5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/View using Guid(51de17d139724b1ba02a64796d5da5df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a789a6ea4ecca43fce3087bb295ce0af') in 0.000659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.708520 seconds.
+  path: Assets/Scripts/CardsInventorySystem/View/CardsLayout.cs
+  artifactKey: Guid(3bab263c6f294812a4d14938a17690cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/View/CardsLayout.cs using Guid(3bab263c6f294812a4d14938a17690cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '753b58723f715a551576ac68f745faeb') in 0.000577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.614712 seconds.
+  path: Assets/Scripts/CardsInventorySystem/View/CardView.cs
+  artifactKey: Guid(f4c06b1f660f40b3861f390b47903064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/View/CardView.cs using Guid(f4c06b1f660f40b3861f390b47903064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c1964b8352c7eff9583fb0e3e15a833') in 0.000637 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.792632 seconds.
+  path: Assets/Scripts/CardsInventorySystem/View/PlayerCardsView.cs
+  artifactKey: Guid(58dec508a4544d709bafa170aeba2635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/View/PlayerCardsView.cs using Guid(58dec508a4544d709bafa170aeba2635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ce177238b60e5c9522af39b06e6391b') in 0.000583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.651361 seconds.
+  path: Assets/Scripts/CardsInventorySystem/GlobalCardsContainer.cs
+  artifactKey: Guid(603f8c6540424635a3879887d7bdcde1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem/GlobalCardsContainer.cs using Guid(603f8c6540424635a3879887d7bdcde1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6955e9320edf1cca0bc8a05854e80959') in 0.000580 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 25.107536 seconds.
+  path: Assets/Scripts/GameSystem/CardPlaceHandler.cs
+  artifactKey: Guid(5463752d104c4b1baebf4c312306cc9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/CardPlaceHandler.cs using Guid(5463752d104c4b1baebf4c312306cc9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c010c6f4bf39f2b66161a9ecae42e3aa') in 0.000637 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.982045 seconds.
+  path: Assets/Scripts/GameSystem/CardsDealer.cs
+  artifactKey: Guid(d2406755a32240399d934c19549b1221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/CardsDealer.cs using Guid(d2406755a32240399d934c19549b1221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95505430ec4259ac79bd202136c485bd') in 0.000556 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.688911 seconds.
+  path: Assets/Scripts/GameSystem/ClickableCardHandler.cs
+  artifactKey: Guid(8453cc0b544048a497df26e76894da2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/ClickableCardHandler.cs using Guid(8453cc0b544048a497df26e76894da2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a08e0a369c61f1e64c0ccb884af7618') in 0.000614 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.062916 seconds.
+  path: Assets/Scripts/GameSystem/GameManager.cs
+  artifactKey: Guid(25b3a1b68d1847e5bb6f06f7dec77317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/GameManager.cs using Guid(25b3a1b68d1847e5bb6f06f7dec77317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b57b1d6763a004969443ba7791d202') in 0.000564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.966693 seconds.
+  path: Assets/Scripts/GameSystem/GameTypeMarker.cs
+  artifactKey: Guid(4d649e4f97914a19a219d398f1d3b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/GameTypeMarker.cs using Guid(4d649e4f97914a19a219d398f1d3b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10b4eecc355b269a1ea8f963d718fd9a') in 0.000600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.353458 seconds.
+  path: Assets/Scripts/GameSystem/PlayerViewsConnector.cs
+  artifactKey: Guid(fec5a772d60741279e84de716c946306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/PlayerViewsConnector.cs using Guid(fec5a772d60741279e84de716c946306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '246f772130dc2bd4d956444a3e652485') in 0.000597 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.575398 seconds.
+  path: Assets/Scripts/GameSystem/WinHandler.cs
+  artifactKey: Guid(fbcfb6a96b744c6ea9c240069b9ed390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/WinHandler.cs using Guid(fbcfb6a96b744c6ea9c240069b9ed390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39e8a0e8316196be1309bf8b3046084a') in 0.000582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.408815 seconds.
+  path: Assets/Scripts/GameSystem/View
+  artifactKey: Guid(d713490fcd744cdf83ab77b700bf3ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View using Guid(d713490fcd744cdf83ab77b700bf3ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae0963f2530788ec745712517da27f10') in 0.000601 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.277557 seconds.
+  path: Assets/Scripts/GameSystem/View/WinView.cs
+  artifactKey: Guid(7d67afbcec494d089d8ba5b1e5623462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/WinView.cs using Guid(7d67afbcec494d089d8ba5b1e5623462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6beba2bfef584a4fd10dd518c9e42434') in 0.000574 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.539891 seconds.
+  path: Assets/Scripts/GameSystem/View/TrashView.cs
+  artifactKey: Guid(306caeab667944b2aad6c762f48dda8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/TrashView.cs using Guid(306caeab667944b2aad6c762f48dda8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d54cb415987f28767eed42f082467d8') in 0.000568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.490438 seconds.
+  path: Assets/Scripts/GameSystem/View/PlayerActionsView.cs
+  artifactKey: Guid(107c753560f644c3bbe9d8e2adff8bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/PlayerActionsView.cs using Guid(107c753560f644c3bbe9d8e2adff8bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39edf80abb74453b73e7ab55a4b5985b') in 0.000637 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.681093 seconds.
+  path: Assets/Scripts/GameSystem/View/DeckView.cs
+  artifactKey: Guid(dc66097934d54f6fa0ef2986b6f51592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/DeckView.cs using Guid(dc66097934d54f6fa0ef2986b6f51592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48d24a48547095557a87a9e2d24e3698') in 0.000560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.758663 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons
+  artifactKey: Guid(967dc6fd0e274101828f7c2152c9195f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons using Guid(967dc6fd0e274101828f7c2152c9195f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4b4d9284af3cc16789697e86d50ea3a') in 0.000608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.964928 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons/TakeButtonHandler.cs
+  artifactKey: Guid(47a0e730053e4b6280dc66f1bcf92754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons/TakeButtonHandler.cs using Guid(47a0e730053e4b6280dc66f1bcf92754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f659cc08cdfbaadff1095a5d964026bd') in 0.000581 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.524671 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons/PlayerButtonsView.cs
+  artifactKey: Guid(6334c654d18143fe83b71416c3456116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons/PlayerButtonsView.cs using Guid(6334c654d18143fe83b71416c3456116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c19b84787c112b7bba27fd253391e41') in 0.000560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.540214 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons/OtherPlayerButtonsView.cs
+  artifactKey: Guid(8db7f06d7a17413a9b200ddc726b55be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons/OtherPlayerButtonsView.cs using Guid(8db7f06d7a17413a9b200ddc726b55be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2618f6714b9eea84db91d06583d79d7f') in 0.000569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.898103 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons/GameButtonType.cs
+  artifactKey: Guid(35abd4c80e1a4e91bfa524c82291f8cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons/GameButtonType.cs using Guid(35abd4c80e1a4e91bfa524c82291f8cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dac00b00b9dc95441bd64af78a5d508') in 0.000755 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.485665 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons/EndMoveButtonHandler.cs
+  artifactKey: Guid(281ed664dded48d492a2c83a53e4b7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons/EndMoveButtonHandler.cs using Guid(281ed664dded48d492a2c83a53e4b7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3863d1f78954630ab52553e2bc660a48') in 0.000591 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.113133 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons/BaseGameButton.cs
+  artifactKey: Guid(e378e0a57f254c5186bc0dfc305513ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons/BaseGameButton.cs using Guid(e378e0a57f254c5186bc0dfc305513ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c5fa296a0cc8c66f8b2548983fe6fe') in 0.000634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.099733 seconds.
+  path: Assets/Scripts/GameSystem/View/GameButtons/ActionButton.cs
+  artifactKey: Guid(f31501db28c84b09a5f2c6b7b7856567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/View/GameButtons/ActionButton.cs using Guid(f31501db28c84b09a5f2c6b7b7856567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc6c7997838634190f8337975559330') in 0.000577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 17.933720 seconds.
+  path: Assets/Scripts/CardsInventorySystem
+  artifactKey: Guid(91c5cd790be8461b989a37f04dbee9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CardsInventorySystem using Guid(91c5cd790be8461b989a37f04dbee9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db8822cb4adba710a5116da86a336b35') in 0.000616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.402013 seconds.
+  path: Assets/Scripts/Events
+  artifactKey: Guid(12907c00dbf342dea9c4e3ade0eeb6ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Events using Guid(12907c00dbf342dea9c4e3ade0eeb6ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '503a0e5b1b507a8dca9a09983c15bc83') in 0.000635 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.610715 seconds.
+  path: Assets/Scripts/Events/GameEventsContainer.cs
+  artifactKey: Guid(766eaca72eb645a4a89bd1f00ed6eac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Events/GameEventsContainer.cs using Guid(766eaca72eb645a4a89bd1f00ed6eac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c58c8622dd9772d825191cfe566c48') in 0.000568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.597671 seconds.
+  path: Assets/Scripts/Events/GlobalEventsContainer.cs
+  artifactKey: Guid(65f5988922b3454685bd1e482765433a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Events/GlobalEventsContainer.cs using Guid(65f5988922b3454685bd1e482765433a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ff43e3d10a03a32ef9230e525147326') in 0.000681 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.178372 seconds.
+  path: Assets/Scripts/GameSystem
+  artifactKey: Guid(055433af46724caab00182c12f25b81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem using Guid(055433af46724caab00182c12f25b81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '396a5d096afe4e05bf3d5d551aacfac6') in 0.000898 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.010641 seconds.
+  path: Assets/Scripts/GameSystem/PlayersContainer.cs
+  artifactKey: Guid(5aa7ec71240e418a8156a2303338cc48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameSystem/PlayersContainer.cs using Guid(5aa7ec71240e418a8156a2303338cc48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08965ef3a9d6850235026bd405c58544') in 0.000601 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 34.047211 seconds.
+  path: Assets/Scripts/Loading
+  artifactKey: Guid(1b372c5f9b7e4660a12b8c158c6316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Loading using Guid(1b372c5f9b7e4660a12b8c158c6316f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc31f027600ed7e8c9995e1efcc6c3af') in 0.000601 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.860703 seconds.
+  path: Assets/Scripts/Loading/GameSceneLoading.cs
+  artifactKey: Guid(52e8737cf50a44a6be863081a8a001ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Loading/GameSceneLoading.cs using Guid(52e8737cf50a44a6be863081a8a001ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b65471df58c181fc98726812ae765a6') in 0.000578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.729227 seconds.
+  path: Assets/Scripts/MultiplayerSystem
+  artifactKey: Guid(14adb220059740b599913b1c377442d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MultiplayerSystem using Guid(14adb220059740b599913b1c377442d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56478cbde7b6cc43a695f7485ef6c32d') in 0.000587 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.645237 seconds.
+  path: Assets/Scripts/MultiplayerSystem/CustomData
+  artifactKey: Guid(867df21f32af48ff969cfc1a752c6790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MultiplayerSystem/CustomData using Guid(867df21f32af48ff969cfc1a752c6790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8650a68dff61d42dffc0abdee513e4') in 0.000586 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.517730 seconds.
+  path: Assets/Scripts/MultiplayerSystem/CustomData/NetworkCardData.cs
+  artifactKey: Guid(3732940a2aeb4b1f94f726535a78ba9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MultiplayerSystem/CustomData/NetworkCardData.cs using Guid(3732940a2aeb4b1f94f726535a78ba9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f85f306280660782521d11b142fc9ea') in 0.000574 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.867971 seconds.
+  path: Assets/Scripts/MultiplayerSystem/CustomData/NetworkConverter.cs
+  artifactKey: Guid(c46d0b478a084f9780fcd90615569bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MultiplayerSystem/CustomData/NetworkConverter.cs using Guid(c46d0b478a084f9780fcd90615569bd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72e41631e1c585a8de102ad51a383c30') in 0.000569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.145981 seconds.
+  path: Assets/Scripts/MultiplayerSystem/CustomData/NetworkPlayerData.cs
+  artifactKey: Guid(73d81969580544cdbc793b6996b13b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MultiplayerSystem/CustomData/NetworkPlayerData.cs using Guid(73d81969580544cdbc793b6996b13b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb10e89a4cf0a7f9d5b34525ec02d590') in 0.000577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.663754 seconds.
+  path: Assets/Scripts/PlayersSystem
+  artifactKey: Guid(b63fc69516a84eecbe4211740b616161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem using Guid(b63fc69516a84eecbe4211740b616161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a1d3b6d6716a9943f6d6a770db300a') in 0.000590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.777097 seconds.
+  path: Assets/Scripts/PlayersSystem/PlayerHandler.cs
+  artifactKey: Guid(fe506989fab64233a8a89b0df3ffa623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/PlayerHandler.cs using Guid(fe506989fab64233a8a89b0df3ffa623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '552675c191a3f802ed79e17949507124') in 0.000576 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.658849 seconds.
+  path: Assets/Scripts/PlayersSystem/PlayersAssigner.cs
+  artifactKey: Guid(4a4187030453400c98fc8f3ab631c88f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/PlayersAssigner.cs using Guid(4a4187030453400c98fc8f3ab631c88f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9f1ddfe92766c94dc1874a6aa8c4c0') in 0.000645 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.626232 seconds.
+  path: Assets/Scripts/PlayersSystem/View
+  artifactKey: Guid(66c7a56ec25140629dd5a38713934adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/View using Guid(66c7a56ec25140629dd5a38713934adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '426bcd2f55489901bf78de39312efbb2') in 0.000613 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.270594 seconds.
+  path: Assets/Scripts/PlayersSystem/View/OtherPlayerView.cs
+  artifactKey: Guid(3096162fb1d04b7487b3f313e3b9110a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/View/OtherPlayerView.cs using Guid(3096162fb1d04b7487b3f313e3b9110a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfcfe2f1c9a8d9e46cc4782f3f3dda80') in 0.000578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.313789 seconds.
+  path: Assets/Scripts/PlayersSystem/View/MyPlayerView.cs
+  artifactKey: Guid(22c5c9e6a76a426a9d087e36dc280053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/View/MyPlayerView.cs using Guid(22c5c9e6a76a426a9d087e36dc280053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '415f98b9aed95f0652884768d5d4cba0') in 0.000561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.274040 seconds.
+  path: Assets/Scripts/PlayersSystem/View/BasePlayerView.cs
+  artifactKey: Guid(38b52824d9154504b50cc62f5b7b27f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/View/BasePlayerView.cs using Guid(38b52824d9154504b50cc62f5b7b27f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cba659a38bbc6603a333d40ff19c51f') in 0.000589 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.992850 seconds.
+  path: Assets/Scripts/RoomsSystem
+  artifactKey: Guid(19447fffc9a84c849c3d19239a114f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/RoomsSystem using Guid(19447fffc9a84c849c3d19239a114f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5417ad59fb0e912b9fc4cbf774913d7e') in 0.000904 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.777948 seconds.
+  path: Assets/Scripts/RoomsSystem/RoomMarker.cs
+  artifactKey: Guid(afeefd41998448448a8c536a48433036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/RoomsSystem/RoomMarker.cs using Guid(afeefd41998448448a8c536a48433036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92380fbf52b5a1b43cca9b928d77202e') in 0.000567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.266859 seconds.
+  path: Assets/Scripts/RoomsSystem/MultiplayerHandler.cs
+  artifactKey: Guid(a19d4fe4e7744af0b42a7039057ebae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/RoomsSystem/MultiplayerHandler.cs using Guid(a19d4fe4e7744af0b42a7039057ebae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2c4de2ce814ae29c216d96fb8202e9') in 0.000550 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 14.228212 seconds.
+  path: Assets/Scripts/SaveSystem
+  artifactKey: Guid(a273798d51064e13b59746a6fc0a1b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SaveSystem using Guid(a273798d51064e13b59746a6fc0a1b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9557ad8717a93d610fa58374cf02edb2') in 0.000621 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.442999 seconds.
+  path: Assets/Scripts/SaveSystem/GameType.cs
+  artifactKey: Guid(07baeed3d4ce44baad3e259af5b9e741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SaveSystem/GameType.cs using Guid(07baeed3d4ce44baad3e259af5b9e741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a12d98048003cf21bfb948c355d8997f') in 0.000618 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.285400 seconds.
+  path: Assets/Scripts/TableSystem
+  artifactKey: Guid(d35704fecb864b0ebbc6215ba04aa92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TableSystem using Guid(d35704fecb864b0ebbc6215ba04aa92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16dad84d2d2fe849fa13e3868376176') in 0.000580 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.887390 seconds.
+  path: Assets/Scripts/TableSystem/NetworkTableCardData.cs
+  artifactKey: Guid(a8871fddc8a54ea3a57b79d774f31475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TableSystem/NetworkTableCardData.cs using Guid(a8871fddc8a54ea3a57b79d774f31475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01ef42b7751d74f900de369d451dc02d') in 0.000593 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.887168 seconds.
+  path: Assets/Scripts/TableSystem/TableCardsHandler.cs
+  artifactKey: Guid(8d3ac5c1f2284afa8b8dee82de8eb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TableSystem/TableCardsHandler.cs using Guid(8d3ac5c1f2284afa8b8dee82de8eb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57b33d46199c6618eec676c30fb6e537') in 0.000560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.481554 seconds.
+  path: Assets/Scripts/TableSystem/TableCardsView.cs
+  artifactKey: Guid(adc38152005741e4a950257cf9378c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TableSystem/TableCardsView.cs using Guid(adc38152005741e4a950257cf9378c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46054c962fb2e2c312389ab387f8686f') in 0.000585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.068647 seconds.
+  path: Assets/Scripts/TableSystem/TableCardView.cs
+  artifactKey: Guid(c197e476059e44a8aa21ae5c0e906cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TableSystem/TableCardView.cs using Guid(c197e476059e44a8aa21ae5c0e906cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd12bd46ab690232327bd5ac2ab6cfc05') in 0.000577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.759968 seconds.
+  path: Assets/Scripts/TableSystem/TakingCardsHandler.cs
+  artifactKey: Guid(3553bcf25a54414f9bf8d0d76d0988be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TableSystem/TakingCardsHandler.cs using Guid(3553bcf25a54414f9bf8d0d76d0988be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c03586c0610cbe1464a80e996cee3f3') in 0.000568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.442796 seconds.
+  path: Assets/Scripts/UI
+  artifactKey: Guid(ae07294c25b542878a7147f5af1daf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI using Guid(ae07294c25b542878a7147f5af1daf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31c3e28deaeb73b4dbf22dffa13f5e8') in 0.000767 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.791026 seconds.
+  path: Assets/Scripts/UI/RoomsDisplay
+  artifactKey: Guid(1f903b9fbaa44399af15d7f24712ad23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/RoomsDisplay using Guid(1f903b9fbaa44399af15d7f24712ad23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbd5734e45f00a3b22c34fff308b0e63') in 0.000659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.563753 seconds.
+  path: Assets/Scripts/UI/RoomsDisplay/RoomsListView.cs
+  artifactKey: Guid(4973d52e6dd54634891ba24937378a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/RoomsDisplay/RoomsListView.cs using Guid(4973d52e6dd54634891ba24937378a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84acee5263b33b69bbddf2f917a77fbf') in 0.000575 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.438115 seconds.
+  path: Assets/Scripts/UI/RoomsDisplay/RoomView.cs
+  artifactKey: Guid(8c96d81a824c448584ad51b5560b97d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/RoomsDisplay/RoomView.cs using Guid(8c96d81a824c448584ad51b5560b97d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279ae077cbdef5be590ae692ebc2539f') in 0.000734 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.597938 seconds.
+  path: Assets/Scripts/UI/SelectingButtons
+  artifactKey: Guid(911fb02ca44f4c1daeebfd43f6aca1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SelectingButtons using Guid(911fb02ca44f4c1daeebfd43f6aca1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f895b72b027ab1731f64622b2848872d') in 0.000594 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.600910 seconds.
+  path: Assets/Scripts/UI/SelectingButtons/BaseSelectButton.cs
+  artifactKey: Guid(394ce98910c1465e938c59ff635aeae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SelectingButtons/BaseSelectButton.cs using Guid(394ce98910c1465e938c59ff635aeae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5a4f78e2ab403cee1ceb1a8ec000d3d') in 0.000591 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.857649 seconds.
+  path: Assets/Scripts/UI/SelectingButtons/BidSelectButton.cs
+  artifactKey: Guid(32ca832fc17b47b297029bc4a156411d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SelectingButtons/BidSelectButton.cs using Guid(32ca832fc17b47b297029bc4a156411d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fca6c9a3aedc751061697c6ba0354daa') in 0.000568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.370944 seconds.
+  path: Assets/Scripts/UI/SelectingButtons/GameTypeSelectButton.cs
+  artifactKey: Guid(6a77da1362504b8e8ce1fc38b754ba7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SelectingButtons/GameTypeSelectButton.cs using Guid(6a77da1362504b8e8ce1fc38b754ba7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddc51d5e9c1a6304226ca9c7b783fec8') in 0.000640 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.427908 seconds.
+  path: Assets/Scripts/UI/SelectingButtons/PlayersCountSelectButton.cs
+  artifactKey: Guid(90f943eee1194da9b091d2e13cd68b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/SelectingButtons/PlayersCountSelectButton.cs using Guid(90f943eee1194da9b091d2e13cd68b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd285cf21c02438b4e3963009f6b45f50') in 0.000587 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.597725 seconds.
+  path: Assets/Scripts/UI/AlterunaViewDisabler.cs
+  artifactKey: Guid(2cbf101111f94a8199487362c9cbecb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/AlterunaViewDisabler.cs using Guid(2cbf101111f94a8199487362c9cbecb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb9a8dc00e434faac339fa1265e96400') in 0.000563 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.656 seconds
+Refreshing native plugins compatible for Editor in 4.95 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.419 seconds
+Domain Reload Profiling: 2073ms
+	BeginReloadAssembly (212ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (330ms)
+		LoadAssemblies (428ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (27ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1419ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (786ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (64ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (593ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 4.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3192 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (43.0 KB). Loaded Objects now: 3672.
+Memory consumption went from 130.3 MB to 130.2 MB.
+Total: 4.224600 ms (FindLiveObjects: 0.335100 ms CreateObjectMapping: 0.099500 ms MarkObjects: 3.685300 ms  DeleteObjects: 0.103400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CardsDealer.cs: 8ac51a3c0c387f447e84be3a86f7447b -> 
+  custom:scripting/monoscript/fileName/BasePlayerView.cs: 04e9c7de31016324a3fdffe90870c0c0 -> 
+  custom:scripting/monoscript/fileName/CardsInventoryHandler.cs: ff98dca147cd0dd0061edbbb857a6884 -> 
+  custom:scripting/monoscript/fileName/TakingCardsHandler.cs: 44d2f676533a7f06f16c09604f9f2fdb -> 
+  custom:scripting/monoscript/fileName/ExampleRpcProcedureParameters.cs: 8006dab72d3c5ee713ee7bdab83bd367 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/CardsLayout.cs: eff4b3aaa9f0d71ec19c17587e62cf7c -> 
+  custom:scripting/monoscript/fileName/MapDescriptions.cs: dcd4ad2f82c269008ba8ebdac8729125 -> 
+  custom:scripting/monoscript/fileName/GameManager.cs: 5010e97345969980589c4a0744278260 -> 
+  custom:scripting/monoscript/fileName/TakeButtonHandler.cs: 1f2b9b39b352060df67c10ebd06bb150 -> 
+  custom:scripting/monoscript/fileName/MultiplayerHandler.cs: 242b478d78c11a5dc25361b676b967e3 -> 
+  custom:scripting/monoscript/fileName/BaseSelectButton.cs: 6ca6a7903476529750299424a1993e44 -> 
+  custom:scripting/monoscript/fileName/PlayersAssigner.cs: b6c65abe3896c7a95a0e5f957ebc9809 -> 
+  custom:scripting/monoscript/fileName/JWTTaker.cs: adc4884fdd6a02fa722ca57460247339 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TrashView.cs: 2cfbc4842fc5649235743e01d3730597 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/CommandTarget.cs: 1607969702e055d433bdcd8d50744d0d -> 
+  custom:scripting/monoscript/fileName/GameTypeSelectButton.cs: 332c677431ce43f5522a96afce8e7fc1 -> 
+  custom:scripting/monoscript/fileName/TableCardsView.cs: 963fb9021261217af4d750f5acb97d61 -> 
+  custom:scripting/monoscript/fileName/OtherPlayerView.cs: 7d589fb007d3a035647d3f2231f67b16 -> 
+  custom:scripting/monoscript/fileName/RoomBrowserRow.cs: 0263fbf2f840a2609629f8a1ac39c37e -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/GlobalCardsContainer.cs: 1bc4c2eece27a4da86690f3bd2e47fae -> 
+  custom:scripting/monoscript/fileName/CommandRotate.cs: 61842fcb42c85bfd3b1fbdee29de2669 -> 
+  custom:scripting/monoscript/fileName/ExampleRpcSerializable.cs: 9318e9e416f58c1d2408e785e5523099 -> 
+  custom:scripting/monoscript/fileName/MapInfoDrawer.cs: 877c3dfe10d41fcfb1c07cd0544f93ce -> 
+  custom:scripting/monoscript/fileName/AlterunaViewDisabler.cs: eeceb2d722404cb0df1f85e623e59b50 -> 
+  custom:scripting/monoscript/fileName/PlayerButtonsView.cs: dd8e4f6ac0faf0381258c7b8fc54b122 -> 
+  custom:scripting/monoscript/fileName/MatchmakingMenu.cs: 66331c0978b309d0aa92d3e9f690d3c0 -> 
+  custom:scripting/monoscript/fileName/PlayerHandler.cs: 8f6c48bff78d1146bdf2637d02ca276f -> 
+  custom:scripting/monoscript/fileName/CommandTp.cs: 9f051748461ff63322509c81ed0a98f4 -> 
+  custom:scripting/monoscript/fileName/CustomRoomInfo.cs: f18724d40544d4bfd903f99fa9f029d8 -> 
+  custom:scripting/monoscript/fileName/StatusPopup.cs: d02f2aaf41ebae1192abcf26b104df48 -> 
+  custom:scripting/monoscript/fileName/RoomBrowserSortButton.cs: 4e7817bf86329267a4907781c3589ac7 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/OtherPlayerButtonsView.cs: d95433824acdbeca1736ee452b2b1838 -> 
+  custom:scripting/monoscript/fileName/PasswordPopup.cs: 15bd0f1c9278d85bc8450e2488a0c07a -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/BidSelectButton.cs: 7f30efc7c557e3c7b5deef905cf42d82 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/RoomsListView.cs: 3dfcf07bdc9a73f5171f3f0b8e5cf0d3 -> 
+  custom:scripting/monoscript/fileName/PlayerActionsView.cs: 3c0a03ec050bc5f31409f302f12cdd41 -> 
+  custom:scripting/monoscript/fileName/GlobalEventsContainer.cs: ae93e1759aa87854320311b52f80d6b7 -> 
+  custom:scripting/monoscript/fileName/CreateRoomMenu.cs: cf73dac2e453083dc1bfca39006ee7b2 -> 
+  custom:scripting/monoscript/fileName/EndMoveButtonHandler.cs: e7ad92c942734863ca671b64f4de181d -> 
+  custom:scripting/monoscript/fileName/MatchmakingEntry.cs: 6715287caa344ee3456b07d577996de1 -> 
+  custom:scripting/monoscript/fileName/CardPlaceHandler.cs: b64abb258802cf4edfbc7b5a12ce53d1 -> 
+  custom:scripting/monoscript/fileName/RoomCreator.cs: c27c988eb51de60ee227b1debf873447 -> 
+  custom:scripting/monoscript/fileName/TableCardsHandler.cs: e498d8fe912e53d1083e1ac477aedd9b -> 
+  custom:scripting/monoscript/fileName/BaseRoomBrowserEditor.cs: 1ff4f286c8272ed53477fb34307da543 -> 
+  custom:scripting/monoscript/fileName/TableCardView.cs: db5a39adb097756d952e9d87a3dcdf9c -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/RoomBrowser.cs: 0dc569d01367f01d2987a75076205ee3 -> 
+  custom:scripting/monoscript/fileName/CardView.cs: c8a0ecd6cbf4dacb79002ae047118070 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CommandUid.cs: fb68427bf59668efbec3ee511a571de2 -> 
+  custom:scripting/monoscript/fileName/CommandSync.cs: 3608745329e4e2ba889fcd797d35fe5f -> 
+  custom:scripting/monoscript/fileName/PlayerViewsConnector.cs: 07301024063f91103db63a4213f631c1 -> 
+  custom:scripting/monoscript/fileName/ExampleSynchronizable.cs: f2afc1e4f3db0a5e002f1c32a9fcbfab -> 
+  custom:scripting/monoscript/fileName/DeckView.cs: b914c03e0bc351402a5cc1d894441451 -> 
+  custom:scripting/monoscript/fileName/WinHandler.cs: d2bee544d2d10a5a6b7110a11535ff7d -> 
+  custom:scripting/monoscript/fileName/PlayersContainer.cs: 2bdd74635bf88142bbc8b8bf017def6a -> 
+  custom:scripting/monoscript/fileName/ClickableCardHandler.cs: 305753f0a92def1ba5ca51ada3137985 -> 
+  custom:scripting/monoscript/fileName/ExampleAttributeRpc.cs: b489c4647cb0a052a15139023f6d7c36 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CommandScale.cs: 1b7e84502815dca2acf0eafb643b3313 -> 
+  custom:scripting/monoscript/fileName/MyPlayerView.cs: 456f54b6fb13addeb3a4acab08e24e96 -> 
+  custom:scripting/monoscript/fileName/PlayerCardsView.cs: c45b7749011d83721043ef3a376d963f -> 
+  custom:scripting/monoscript/fileName/ITextChatCommand.cs: a27761eebea2661884dad56ef5a7d75d -> 
+  custom:scripting/monoscript/fileName/TextChatSynchronizable.cs: bad9839a07c2384c313289cd8eb47ebd -> 
+  custom:scripting/monoscript/fileName/BaseRoomBrowser.cs: a6f22eb18ee1e50732ac642ecce5191f -> 
+  custom:scripting/monoscript/fileName/CommandLoadScene.cs: f88875058067fd84195254d01c01bdd9 -> 
+  custom:scripting/monoscript/fileName/RoomMenu.cs: 2e10133974671fba816cfb78d5db6d3b -> 
+  custom:scripting/monoscript/fileName/CommandMove.cs: df7ef5461e8ac8ce593db2a19d311360 -> 
+  custom:scripting/monoscript/fileName/RoomView.cs: f73e0412653f4e7182a5bd23471a76d5 -> 
+  custom:scripting/monoscript/fileName/PlayersCountSelectButton.cs: 812c36027a88512e11a80aecb4bbefa1 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 229.890111 seconds.
+  path: Assets/Scripts/PlayersSystem/View/BasePlayerView.cs
+  artifactKey: Guid(38b52824d9154504b50cc62f5b7b27f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/View/BasePlayerView.cs using Guid(38b52824d9154504b50cc62f5b7b27f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1bf2934590a2d874f05fbf0bf256d94') in 0.002061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.328728 seconds.
+  path: Assets/Scripts/PlayersSystem/View/MyPlayerView.cs
+  artifactKey: Guid(22c5c9e6a76a426a9d087e36dc280053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/View/MyPlayerView.cs using Guid(22c5c9e6a76a426a9d087e36dc280053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b12507a05a1e100a6f91c01b7b025729') in 0.000579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.117462 seconds.
+  path: Assets/Scripts/PlayersSystem/View/OtherPlayerView.cs
+  artifactKey: Guid(3096162fb1d04b7487b3f313e3b9110a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayersSystem/View/OtherPlayerView.cs using Guid(3096162fb1d04b7487b3f313e3b9110a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc415f76d6fd9661a0a192588d9f8c57') in 0.000583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
