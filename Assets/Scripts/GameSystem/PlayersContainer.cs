@@ -1,67 +1,65 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using Events;
-//using PlayersSystem;
-//using TMPro;
-//using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 
-//namespace GameSystem
-//{
-//    public class PlayersContainer : MonoBehaviour
-//    {
-//        private TMP_Text _text;
-        
-//        public static PlayersContainer Singleton { get; set; }
+namespace GameSystem
+{
+    public class PlayersContainer : MonoBehaviour
+    {
+        private TMP_Text _text;
 
-//        private List<PlayerHandler> _players = new List<PlayerHandler>();
-        
-//        public List<PlayerHandler> Players => _players;
+        public static PlayersContainer Singleton { get; set; }
 
-//        private void Awake()
-//            => Singleton = this;
+        //private List<PlayerHandler> _players = new List<PlayerHandler>();
 
-//        private void OnEnable()
-//            => GlobalEventsContainer.OnPlayerSpawned += AddPlayer;
+        //public List<PlayerHandler> Players => _players;
 
-//        private void OnDisable()
-//            => GlobalEventsContainer.OnPlayerSpawned -= AddPlayer;
-        
-//        private void AddPlayer(PlayerHandler playerHandler)
-//            => _players.Add(playerHandler);
+        private void Awake()
+            => Singleton = this;
 
-//        public PlayerHandler GetPlayerBuyId(int id)
-//        {
-//            foreach (var player in _players)
-//            {
-//                if(player.Id != id) continue;
-//                return player;
-//            }
+        //private void OnEnable()
+        //    => GlobalEventsContainer.OnPlayerSpawned += AddPlayer;
 
-//            throw new Exception("Can't find player with id " + id);
-//        }
+        //private void OnDisable()
+        //    => GlobalEventsContainer.OnPlayerSpawned -= AddPlayer;
 
-//        public PlayerHandler GetDefendingPlayer()
-//        {
-//            foreach(var player in _players)
-//                if (player.IsDefending)
-//                    return player;
-//            return null;
-//        }
+        //private void AddPlayer(PlayerHandler playerHandler)
+        //    => _players.Add(playerHandler);
 
-//        public PlayerHandler GetMovingPlayer()
-//        {
-//            foreach(var player in _players)
-//                if (player.IsMoving)
-//                    return player;
-//            throw new Exception("There is no moving player");
-//        }
+        //public PlayerHandler GetPlayerBuyId(int id)
+        //{
+        //    foreach (var player in _players)
+        //    {
+        //        if (player.Id != id) continue;
+        //        return player;
+        //    }
 
-//        public bool AllPayersPass()
-//        {
-//            foreach(var player in _players)
-//                if (!player.PassPressed && !player.IsDefending && !player.IsWin)
-//                    return false;
-//            return true;
-//        }
-//    }
-//}
+        //    throw new Exception("Can't find player with id " + id);
+        //}
+
+        //public PlayerHandler GetDefendingPlayer()
+        //{
+        //    foreach (var player in _players)
+        //        if (player.IsDefending)
+        //            return player;
+        //    return null;
+        //}
+
+        //public PlayerHandler GetMovingPlayer()
+        //{
+        //    foreach (var player in _players)
+        //        if (player.IsMoving)
+        //            return player;
+        //    throw new Exception("There is no moving player");
+        //}
+
+        //public bool AllPayersPass()
+        //{
+        //    foreach (var player in _players)
+        //        if (!player.PassPressed && !player.IsDefending && !player.IsWin)
+        //            return false;
+        //    return true;
+        //}
+    }
+}

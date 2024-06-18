@@ -1,6 +1,4 @@
-﻿//using CardsInventorySystem.View;
-//using GameSystem.View;
-//using GameSystem.View.GameButtons;
+﻿
 //using MultiplayerSystem.CustomData;
 //using UnityEngine;
 
@@ -19,7 +17,7 @@
 //            _playerActionsView.Init(playerHandler);
 //            _playerButtonsView.Init(playerHandler);
 //        }
-        
+
 //        public override void DisplayCards(NetworkCardData[] cards)
 //            => _playerCardsView.DisplayCards(cards);
 //    }
