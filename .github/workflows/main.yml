@@ -21,4 +21,4 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENCE }}
         with:
           targetPlatform: StandaloneLinux64
-          projectPath: ./Client
+          projectPath: ./Server
