@@ -40,7 +40,7 @@ namespace TonDurakClient.Game
 
         private IEnumerator ProceedGame()
         {
-            while (_clienGame.Status == GameStatus.Running)
+            while (_clienGame.Status != GameStatus.Ended)
             {
                 _clienGame.Tick();
 
