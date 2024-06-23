@@ -1,4 +1,6 @@
 using System;
+using TonDurakClient;
+using TonDurakClient.Game;
 using TonDurakServer.WebTransport;
 using UnityEngine;
 
@@ -22,6 +24,7 @@ namespace TonDurak
         private int _maxMessageSize;
 
         private IWebTransport _webTransport;
+        private IClientGame _clientGame;
 
         private void Awake()
         {
@@ -47,6 +50,12 @@ namespace TonDurak
             DontDestroyOnLoad(this);
         }
 
+        private void InitializeGame()
+        {
+            var game = new ClientDurakGame();
+            _clientGame = game;
+        }
+
         private void Subscribe()
         {
             _webTransport.OnPlayerConnectedEvent += OnConnectToServer;
@@ -63,6 +72,7 @@ namespace TonDurak
 
         private void OnConnectToServer()
         {
+            InitializeGame();
             Debug.Log("Player CONNECTED!");
         }
 

@@ -44,9 +44,10 @@ namespace TonDurakServer.Game
         {
             base.Serialize(id, networkWriter);
 
+            networkWriter.WriteBool(id == Id);
+
             if (id == Id)
             {
-                networkWriter.WriteInt(id);
                 networkWriter.WriteInt(CardsCount);
                 foreach (var card in hand)
                 {
@@ -57,7 +58,6 @@ namespace TonDurakServer.Game
             }
             else
             {
-                networkWriter.WriteInt(id);
                 networkWriter.WriteInt(CardsCount);
                 networkWriter.WriteByte((byte)LastActivity);
             }
@@ -109,8 +109,8 @@ namespace TonDurakServer.Game
         {
             return new AttackPacket()
             {
-                Suit = reader.Read<Suit>(),
-                Rank = reader.Read<Rank>(),
+                Suit = (Suit)reader.ReadByte(),
+                Rank = (Rank)reader.ReadByte(),
             };
         }
 
@@ -118,8 +118,10 @@ namespace TonDurakServer.Game
         {
             return new DefendPacket()
             {
-                MySuit = reader.Read<Suit>(),
-                MyRank = reader.Read<Rank>(),
+                MySuit = (Suit)reader.ReadByte(),
+                MyRank = (Rank)reader.ReadByte(),
+                OtherSuit = (Suit)reader.ReadByte(),
+                OtherRank = (Rank)reader.ReadByte(),
             };
         }
 
@@ -135,8 +137,8 @@ namespace TonDurakServer.Game
         {
             return new TossPacket()
             {
-                Suit = reader.Read<Suit>(),
-                Rank = reader.Read<Rank>(),
+                Suit = (Suit)reader.ReadByte(),
+                Rank = (Rank)reader.ReadByte(),
             };
         }
 
@@ -144,8 +146,8 @@ namespace TonDurakServer.Game
         {
             return new TransferPacket()
             {
-                Suit = reader.Read<Suit>(),
-                Rank = reader.Read<Rank>(),
+                Suit = (Suit)reader.ReadByte(),
+                Rank = (Rank)reader.ReadByte(),
             };
         }
 
