@@ -50,16 +50,16 @@ namespace TonDurakServer.Game
                 networkWriter.WriteInt(CardsCount);
                 foreach (var card in hand)
                 {
-                    networkWriter.Write(card.Rank);
-                    networkWriter.Write(card.Suit);
+                    networkWriter.WriteByte((byte)card.Rank);
+                    networkWriter.WriteByte((byte)card.Suit);
                 }
-                networkWriter.Write(LastActivity);
+                networkWriter.WriteByte((byte)LastActivity);
             }
             else
             {
                 networkWriter.WriteInt(id);
                 networkWriter.WriteInt(CardsCount);
-                networkWriter.Write(LastActivity);
+                networkWriter.WriteByte((byte)LastActivity);
             }
         }
 

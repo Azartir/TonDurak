@@ -4,7 +4,7 @@ namespace TonDurakServer.Game
 {
     public abstract class ServerCardPlayer : ServerPlayer
     {
-        protected ICollection<Card> hand;
+        protected ICollection<Card> hand = new List<Card>();
 
         protected ServerCardPlayer(int id) : base(id)
         {

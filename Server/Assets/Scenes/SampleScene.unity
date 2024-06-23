@@ -170,7 +170,7 @@ MonoBehaviour:
   _serverId: 
   _ip: localhost
   _port: 7778
-  _maxPlayers: 1
+  _maxPlayers: 2
   _maxMessagesPerTick: 10000
   _noDelay: 1
   _sendTimeout: 5000

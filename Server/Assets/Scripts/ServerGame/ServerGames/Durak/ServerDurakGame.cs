@@ -6,7 +6,7 @@ namespace TonDurakServer.Game
 {
     public sealed class ServerDurakGame : ServerCardsGame
     {
-        private int _maxCardCount;
+        private int _maxCardCount = 6;
         private Suit _trumpSuit;
 
         private IDurakPlayer _currentAttacker;

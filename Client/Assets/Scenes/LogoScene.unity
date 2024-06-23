@@ -734,7 +734,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6473b3b4c4dca734bbaea02bae6d2ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _webClient: {fileID: 1638208362}
+  _hostName: localhost
+  _port: 7778
+  _maxMessagesPerTick: 10000
+  _noDelay: 1
+  _sendTimeout: 5000
+  _recieveTimeout: 20000
+  _maxMessageSize: 16384
 --- !u!1 &1986485823
 GameObject:
   m_ObjectHideFlags: 0
