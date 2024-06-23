@@ -1,10 +1,10 @@
-name: GameCI Template 🎮
+name: Deploy to server
 
 on: push
 
 jobs:
   buildWebGL:
-    name: Build for WebGL 🖥️
+    name: Build for Linux 🖥️
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
