@@ -11,6 +11,8 @@ jobs:
     if: github.ref == 'refs/heads/test'
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Build
         uses: game-ci/unity-builder@v4
         env:
