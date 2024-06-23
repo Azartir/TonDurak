@@ -19,4 +19,4 @@ jobs:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: StandaloneLinux64
-          projectPath: Client
+          projectPath: ./Client
