@@ -51,6 +51,7 @@ namespace TonDurakServer.Game
 
         public override void PreparePlayerPacket(int id, NetworkWriter writer) 
         {
+            writer.Write(serverPlayers.Count);
             foreach (var player in serverPlayers)
                 player.Serialize(id, writer);
         }

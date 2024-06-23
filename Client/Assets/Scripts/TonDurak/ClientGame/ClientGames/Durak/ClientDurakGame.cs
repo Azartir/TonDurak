@@ -12,6 +12,12 @@ namespace TonDurakClient.Game
 
         public override void Deserialize(NetworkReader reader)
         {
+            int playerCount = reader.ReadInt();
+
+            if (clientPlayers.Count == 0)
+                for (int i = 0; i < playerCount; i++)
+                    clientPlayers.Add(new ClientDurakPlayer());
+
             foreach (var player in clientPlayers)
                 player.Deserialize(reader);
         }
