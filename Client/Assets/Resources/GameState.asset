@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9504b8001d0c7bf4582c0ac9a5944a26, type: 3}
+  m_Name: GameState
+  m_EditorClassIdentifier: 
+  currentRound: 0
+  currentPlayerTurnIndex: 0
+  players: []
+  deck: {fileID: 11400000, guid: 0053e6f5422ac344aa8bc0e75ad21be8, type: 2}
