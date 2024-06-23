@@ -1,6 +1,6 @@
 name: GameCI Template 🎮
 
-on: workflow_dispatch
+on: push
 
 jobs:
   buildWebGL:
