@@ -36,3 +36,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "./build/"
           target: "/home/egor/"
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 158.160.168.4
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: sudo systemctl restart UnityServer
