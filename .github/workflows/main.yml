@@ -4,16 +4,13 @@ on: push
 
 jobs:
   build:
-    testRunner:
-      name: Test-Runner
+    buildWebGL:
+      name: Build for WebGL 🖥️
       runs-on: ubuntu-latest
-      if: github.ref == 'refs/heads/test'
       strategy:
         fail-fast: false
-        matrix:
-          testMode:
-            - EditMode
-            - PlayMode
+      if: github.ref == 'refs/heads/test'
+
       steps:
         - name: Build
           uses: game-ci/unity-builder@v4
