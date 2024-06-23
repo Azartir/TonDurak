@@ -46,8 +46,12 @@ namespace TonDurak
             _webTransport = webTransport;
             _webTransport.Connect(_hostName, _port);
             
-            Subscribe();
             DontDestroyOnLoad(this);
+        }
+
+        private void InitializeController()
+        {
+
         }
 
         private void InitializeGame()
@@ -56,19 +60,12 @@ namespace TonDurak
             _clientGame = game;
         }
 
-        private void Subscribe()
+        private void Update()
         {
-            _webTransport.OnPlayerConnectedEvent += OnConnectToServer;
-            _webTransport.OnPlayerDisconnectedEvent += OnDisconnectFromServer;
-            _webTransport.OnClientErrorEvent += OnClientErrorEvent;
+            
         }
 
-        private void Unsubscribe()
-        {
-            _webTransport.OnPlayerConnectedEvent -= OnConnectToServer;
-            _webTransport.OnPlayerDisconnectedEvent -= OnDisconnectFromServer;
-            _webTransport.OnClientErrorEvent -= OnClientErrorEvent;
-        }
+        
 
         private void OnConnectToServer()
         {

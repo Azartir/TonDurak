@@ -9,7 +9,7 @@ namespace TonDurakServer.Game
         {
         }
 
-        public DurakActivity LastActivity { get; set; }
+        public DurakActivity LastActivity { get; set; } = DurakActivity.Waiting;
 
         public event Action<IDurakPlayer, AttackPacket> OnPlayerTryAttackEvent;
         public event Action<IDurakPlayer, DefendPacket> OnPlayerTryDefendEvent;
