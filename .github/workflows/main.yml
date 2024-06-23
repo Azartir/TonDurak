@@ -3,21 +3,20 @@ name: GameCI Template 🎮
 on: workflow_dispatch
 
 jobs:
-  build:
-    buildWebGL:
-      name: Build for WebGL 🖥️
-      runs-on: ubuntu-latest
-      strategy:
-        fail-fast: false
-      if: github.ref == 'refs/heads/test'
+  buildWebGL:
+    name: Build for WebGL 🖥️
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    if: github.ref == 'refs/heads/test'
 
-      steps:
-        - name: Build
-          uses: game-ci/unity-builder@v4
-          env:
-            UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-            UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-            UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-          with:
-            targetPlatform: StandaloneLinux64
-            projectPath: Client
+    steps:
+      - name: Build
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+        with:
+          targetPlatform: StandaloneLinux64
+          projectPath: Client
