@@ -29,6 +29,8 @@ namespace TonDurak
         private void Awake()
         {
             InitializeTransport();
+            InitializeGame();
+            InitializeController();
         }
 
         private void InitializeTransport()
@@ -51,41 +53,19 @@ namespace TonDurak
 
         private void InitializeController()
         {
-
+            var controller = gameObject.AddComponent<ClientGameController>();
+            controller.InitializeClientGame(_clientGame, _webTransport);
         }
 
         private void InitializeGame()
         {
             var game = new ClientDurakGame();
             _clientGame = game;
-        }
-
-        private void Update()
-        {
-            
-        }
-
-        
-
-        private void OnConnectToServer()
-        {
-            InitializeGame();
-            Debug.Log("Player CONNECTED!");
-        }
-
-        private void OnDisconnectFromServer()
-        {
-            Debug.Log("Player DISCONNECTED!");
-        }
-
-        private void OnClientErrorEvent(Exception e)
-        {
-            Debug.Log($"error : {e.Message}");
-        }
+        }      
 
         private void OnDestroy()
         {
-            Unsubscribe();
+            
         }
     }
 }
