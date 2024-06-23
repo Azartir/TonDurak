@@ -22,3 +22,17 @@ jobs:
         with:
           targetPlatform: StandaloneLinux64
           projectPath: ./Server
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: build
+
+      - name: copy build to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 158.160.168.4
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "./build/"
+          target: "/home/egor/"
