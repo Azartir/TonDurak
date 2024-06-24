@@ -1,15 +1,14 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using UnityEngine;
 
 public interface ILobbyInfoProvider
 {
-    Task<int> GetPlayerCountAsync(); // число игроков
-    Task<string> GetTrumpCardAsync(); // »м€ козыр€
-    Task<int> GetCurrentTurnPlayerAsync(); // номер игрока, который ходит
-    Task<string[]> GetCurrentAvailableTurnCardAsync(); // список карт в руке доступных дл€ хода
-    Task<Dictionary<int, string>> GetPlayerNameAsync(); // Dictionary<номер, им€>
-    Task<Dictionary<int, int>> GetPlayerCardCountsAsync(); // Dictionary<номер, количество карт>
-    Task<int> GetDeckCardsCountAsync(); // количество карт в колоде
-    Task<Dictionary<int, Sprite>> GetPlayersIconAsync(); // »конки игроков
+    int GetPlayerCount(); //колво игроков
+    Dictionary<int, string> GetPlayerName(); // Dictionary<айди игрока, им€>
+    SimpleCard GetTrumbCard(); // козырь
+    int GetPlayerMove(); // айди игрока, который ходит
+    SimpleCard[] GetCurrentAvailableTurnCard(); // список карт в руке доступных дл€ хода
+    SimpleCard[] GetTableCards(); //карты на столе 
+    Dictionary<int, int> GetPlayerCardCounts(); // Dictionary<айди игрока, количество карт>
+    int GetDeckCardsCount(); // количество карт в колоде
+    Dictionary<int, byte[]> GetPlayersIcon(); // »конки игроков Dictionary<айди игрока, байт эррэй картинки>
 }

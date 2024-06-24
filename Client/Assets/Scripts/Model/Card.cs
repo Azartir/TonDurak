@@ -1,22 +1,39 @@
-using UnityEngine;
-
-[CreateAssetMenu(fileName = "New Card", menuName = "Card Game/Card")]
-public class Card : ScriptableObject
+public struct SimpleCard
 {
-    public enum Suit { Hearts, Diamonds, Clubs, Spades };
-    public enum Rank {Two = 2, Three = 3, Four = 4, Five = 5, Six = 6, Seven = 7, Eight = 8, Nine = 9, Ten = 10, Jack = 11, Queen = 12, King = 13, Ace = 14, };
+    public Rank CardRank { get; }
+    public Suit CardSuit { get; }
 
-    public Suit suit;
-    public Rank rank;
-    public GameObject cardPrefab; // Префаб карты для отрисовки
-
-    // Конструктор для удобства создания карты
-    public static Card CreateCard(Suit suit, Rank rank, GameObject cardPrefab)
+    public SimpleCard(Rank rank, Suit suit)
     {
-        Card card = ScriptableObject.CreateInstance<Card>();
-        card.suit = suit;
-        card.rank = rank;
-        card.cardPrefab = cardPrefab;
-        return card;
+        CardRank = rank;
+        CardSuit = suit;
     }
+
+    public override string ToString()
+    {
+        return $"{CardRank} of {CardSuit}";
+    }
+}
+public enum Rank
+{
+    Two = 2,
+    Three,
+    Four,
+    Five,
+    Six,
+    Seven,
+    Eight,
+    Nine,
+    Ten,
+    Jack,
+    Queen,
+    King,
+    Ace
+}
+public enum Suit
+{
+    Hearts,
+    Diamonds,
+    Clubs,
+    Spades
 }

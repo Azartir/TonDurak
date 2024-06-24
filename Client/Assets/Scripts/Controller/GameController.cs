@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private TestLobbyManager lobbyInfoProvider; // Ссылка на провайдер информации лобби
+    [SerializeField] private LobbyManager lobbyInfoProvider; // Ссылка на провайдер информации лобби
     [SerializeField] private CardPool cardPool;
     [Header("gameObjects")]
     [SerializeField] private GameObject[] playerObjectsMove;
@@ -17,12 +17,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private TMP_Text[] playerCardCountTexts; // Ссылки на текстовые поля для количества карт у игроков
     [SerializeField] private Image trumCard;
     [SerializeField] private TMP_Text deckCardCountText; // Ссылка на текстовое поле для количества карт в колоде
+    [SerializeField] private Transform deck;
 
     private void Start()
     {
         if (lobbyInfoProvider != null)
         {
-            StartCoroutine(DisplayLobbyInfo());
             StartCoroutine(SetupPlayers());
         }
         else
@@ -31,33 +31,62 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private IEnumerator SetupPlayers()
+    {
+        // Получаем количество игроков
+        int playerCount = lobbyInfoProvider.GetPlayerCount();
+        Debug.Log("Player Count: " + playerCount);
+
+        // Получаем имена игроков
+        Dictionary<int, string> playerNames = lobbyInfoProvider.GetPlayerName();
+
+        // Получаем иконки игроков
+        Dictionary<int, byte[]> iconData = lobbyInfoProvider.GetPlayersIcon();
+        Dictionary<int, Sprite> playerIcons = new Dictionary<int, Sprite>();
+        foreach (var item in iconData)
+        {
+            //playerIcons[item.Key] = ConvertToSprite(item.Value);
+        }
+
+        // Настраиваем объекты игроков
+        for (int i = 0; i < playerObjects.Length; i++)
+        {
+            if (i < playerCount)
+            {
+                playerObjects[i].SetActive(true);
+                playerNameTexts[i].text = playerNames.ContainsKey(i + 1) ? playerNames[i + 1] : "Unknown Player";
+
+                // Устанавливаем иконку игрока
+                if (playerIcons.ContainsKey(i + 1))
+                {
+                    this.playerIcons[i].sprite = playerIcons[i + 1];
+                }
+                else
+                {
+                    Debug.LogWarning("Icon for Player " + (i + 1) + " not found.");
+                }
+            }
+            else
+            {
+                playerObjects[i].SetActive(false);
+            }
+        }
+
+        yield return StartCoroutine(DisplayLobbyInfo());
+    }
+
     private IEnumerator DisplayLobbyInfo()
     {
-        // Асинхронное получение данных
-        Task<int> playerCountTask = lobbyInfoProvider.GetPlayerCountAsync();
-        Task<string> trumpCardTask = lobbyInfoProvider.GetTrumpCardAsync();
-        Task<int> currentTurnPlayerTask = lobbyInfoProvider.GetCurrentTurnPlayerAsync();
-        Task<string[]> availableTurnCardsTask = lobbyInfoProvider.GetCurrentAvailableTurnCardAsync();
-        Task<Dictionary<int, string>> playerNamesTask = lobbyInfoProvider.GetPlayerNameAsync();
-        Task<Dictionary<int, int>> playerCardCountsTask = lobbyInfoProvider.GetPlayerCardCountsAsync();
-        Task<int> deckCardsCountTask = lobbyInfoProvider.GetDeckCardsCountAsync();
+        // Получаем и отображаем данные
+        int playerCount = lobbyInfoProvider.GetPlayerCount();
+        SimpleCard trumpCard = lobbyInfoProvider.GetTrumbCard();
+        int currentTurnPlayer = lobbyInfoProvider.GetPlayerMove();
+        SimpleCard[] availableTurnCards = lobbyInfoProvider.GetCurrentAvailableTurnCard();
+        Dictionary<int, string> playerNames = lobbyInfoProvider.GetPlayerName();
+        Dictionary<int, int> playerCardCounts = lobbyInfoProvider.GetPlayerCardCounts();
+        int deckCardsCount = lobbyInfoProvider.GetDeckCardsCount();
 
-        // Ожидание завершения всех задач
-        yield return new WaitUntil(() => playerCountTask.IsCompleted && trumpCardTask.IsCompleted &&
-                                        currentTurnPlayerTask.IsCompleted && availableTurnCardsTask.IsCompleted &&
-                                        playerNamesTask.IsCompleted && playerCardCountsTask.IsCompleted &&
-                                        deckCardsCountTask.IsCompleted);
-
-        // Получение результатов
-        int playerCount = playerCountTask.Result;
-        string trumpCard = trumpCardTask.Result;
-        int currentTurnPlayer = currentTurnPlayerTask.Result;
-        string[] availableTurnCards = availableTurnCardsTask.Result;
-        Dictionary<int, string> playerNames = playerNamesTask.Result;
-        Dictionary<int, int> playerCardCounts = playerCardCountsTask.Result;
-        int deckCardsCount = deckCardsCountTask.Result;
-
-        // Отображение информации
+        // Вывод в лог
         Debug.Log("Player Count: " + playerCount);
         Debug.Log("Trump Card: " + trumpCard);
         Debug.Log("Current Turn Player: " + currentTurnPlayer);
@@ -74,143 +103,77 @@ public class GameController : MonoBehaviour
             Debug.Log("Player " + playerCardCount.Key + " Card Count: " + playerCardCount.Value);
         }
 
-        // Вызываем методы-корутины для обновления интерфейса
-        yield return UpdateTrumpCardImage(trumpCard);
-        yield return ActivateObjectsByCurrentPlayer(currentTurnPlayer);
-        yield return AddCardDragAndDropToAvailableCards(availableTurnCards);
+        // Обновляем интерфейс
+        yield return StartCoroutine(UpdateTrumpCardImage(trumpCard));
+        yield return StartCoroutine(ActivateObjectsByCurrentPlayer(currentTurnPlayer));
+        yield return StartCoroutine(AddCardDragAndDropToAvailableCards(availableTurnCards));
 
         // Обновляем количество карт у каждого игрока
         for (int i = 0; i < playerCount; i++)
         {
-            yield return UpdatePlayerCardCountText(i + 1, playerCardCounts.ContainsKey(i + 1) ? playerCardCounts[i + 1] : 0);
+            yield return StartCoroutine(UpdatePlayerCardCountText(i + 1, playerCardCounts.ContainsKey(i + 1) ? playerCardCounts[i + 1] : 0));
         }
 
         // Обновляем количество карт в колоде
-        yield return UpdateDeckCardCountText(deckCardsCount);
+        yield return StartCoroutine(UpdateDeckCardCountText(deckCardsCount));
     }
 
-    private IEnumerator SetupPlayers()
+    private IEnumerator UpdateTrumpCardImage(SimpleCard trumpCard)
     {
-        // Получаем количество игроков
-        Task<int> playerCountTask = lobbyInfoProvider.GetPlayerCountAsync();
-        yield return new WaitUntil(() => playerCountTask.IsCompleted);
-        int playerCount = playerCountTask.Result;
-        Debug.Log("Player Count: " + playerCount);
+        // Получаем карту из пула по имени
+        GameObject card = cardPool.GetCard(trumpCard.ToString());
 
-        // Получаем имена игроков
-        Task<Dictionary<int, string>> playerNamesTask = lobbyInfoProvider.GetPlayerNameAsync();
-        yield return new WaitUntil(() => playerNamesTask.IsCompleted);
-        Dictionary<int, string> playerNames = playerNamesTask.Result;
-
-        // Получаем иконки игроков
-        Task<Dictionary<int, Sprite>> playerIconsTask = lobbyInfoProvider.GetPlayersIconAsync();
-        yield return new WaitUntil(() => playerIconsTask.IsCompleted);
-        Dictionary<int, Sprite> icons = playerIconsTask.Result;
-
-        // Настраиваем объекты игроков
-        for (int i = 0; i < playerObjects.Length; i++)
+        if (card == null)
         {
-            if (i < playerCount)
-            {
-                playerObjects[i].SetActive(true);
-                playerNameTexts[i].text = playerNames.ContainsKey(i + 1) ? playerNames[i + 1] : "Unknown Player";
-
-                // Устанавливаем иконку игрока
-                if (icons.ContainsKey(i + 1))
-                {
-                    playerIcons[i].sprite = icons[i + 1];
-                }
-                else
-                {
-                    Debug.LogWarning("Icon for Player " + (i + 1) + " not found.");
-                }
-            }
-            else
-            {
-                playerObjects[i].SetActive(false);
-            }
-        }
-    }
-
-    private IEnumerator UpdateTrumpCardImage(string trumpCardName)
-    {
-        // Найти картинку или спрайт, на котором нужно изменить изображение
-        // Предположим, что у вас есть объект, на котором расположен компонент Image
-        Image imageToUpdate = playerIcons[0]; // Замените на реальный компонент Image, на котором нужно обновить изображение
-
-        if (imageToUpdate != null)
-        {
-            // Загрузить спрайт по имени козыря (предполагается, что имя спрайта совпадает с именем козыря)
-            Sprite newSprite = Resources.Load<Sprite>(trumpCardName); // Замените на ваш метод загрузки спрайта
-
-            if (newSprite != null)
-            {
-                imageToUpdate.sprite = newSprite;
-            }
-            else
-            {
-                Debug.LogWarning("Sprite for trump card " + trumpCardName + " not found.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Image component to update not found.");
+            Debug.LogWarning("Card not found in pool: " + trumpCard);
+            yield break;
         }
 
-        yield return null;
+        // Устанавливаем карту дочерним элементом
+        card.transform.SetParent(deck, false);
+        card.transform.localPosition = Vector3.zero;
+        card.transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+        // Анимация поворота карты
+        card.transform.DORotate(new Vector3(0, 60, 0), 1, RotateMode.FastBeyond360)
+            .SetEase(Ease.OutQuad);
+
+        yield return new WaitForSeconds(1);
     }
 
     private IEnumerator ActivateObjectsByCurrentPlayer(int currentPlayerNumber)
     {
-        // Предположим, что у вас есть массив объектов, которые нужно активировать в зависимости от номера текущего игрока
-        // Используйте вашу логику активации объектов здесь
-        // Например:
         for (int i = 0; i < playerObjectsMove.Length; i++)
         {
-            if (i + 1 == currentPlayerNumber)
-            {
-                playerObjectsMove[i].SetActive(true);
-            }
-            else
-            {
-                playerObjectsMove[i].SetActive(false);
-            }
+            playerObjectsMove[i].SetActive(i + 1 == currentPlayerNumber);
         }
 
         yield return null;
     }
 
-    private IEnumerator AddCardDragAndDropToAvailableCards(string[] availableCards)
+    private IEnumerator AddCardDragAndDropToAvailableCards(SimpleCard[] availableCards)
     {
-        foreach (string cardName in availableCards)
+        foreach (SimpleCard card in availableCards)
         {
-            // Поиск объекта карты в пуле по ключу (например, по имени карты)
-            GameObject cardObject = cardPool.GetCard(cardName);
+            GameObject cardObject = cardPool.GetCard(card.ToString());
 
             if (cardObject != null)
             {
-                // Активация объекта, если он неактивен
-                if (!cardObject.activeSelf)
-                {
-                    cardObject.SetActive(true);
-                }
+                cardObject.SetActive(true);
 
-                // Проверка наличия компонента CardDragAndDrop
                 CardDragAndDrop dragAndDropComponent = cardObject.GetComponent<CardDragAndDrop>();
-
                 if (dragAndDropComponent == null)
                 {
                     dragAndDropComponent = cardObject.AddComponent<CardDragAndDrop>();
                 }
                 else
                 {
-                    Debug.Log("Card object already has CardDragAndDrop component: " + cardName);
+                    Debug.Log("Card object already has CardDragAndDrop component: " + card);
                 }
             }
             else
             {
-                // Объект карты не найден в пуле
-                Debug.LogWarning("Card object not found in pool: " + cardName);
+                Debug.LogWarning("Card object not found in pool: " + card);
             }
         }
 
@@ -219,9 +182,14 @@ public class GameController : MonoBehaviour
 
     private IEnumerator UpdatePlayerCardCountText(int playerNumber, int cardCount)
     {
-        // Предположим, что у вас есть массив текстовых полей для количества карт игроков
-        TMP_Text cardCountText = playerCardCountTexts[playerNumber - 1]; // Замените на ваше реальное текстовое поле
+        // Проверяем допустимость индекса playerNumber
+        if (playerNumber < 1 || playerNumber > playerCardCountTexts.Length)
+        {
+            Debug.LogWarning("Player number " + playerNumber + " is out of range for playerCardCountTexts array.");
+            yield break;
+        }
 
+        TMP_Text cardCountText = playerCardCountTexts[playerNumber - 1];
         if (cardCountText != null)
         {
             string cardText = cardCount == 1 ? "1 card" : cardCount + " cards";
@@ -248,4 +216,23 @@ public class GameController : MonoBehaviour
 
         yield return null;
     }
+
+    // Вспомогательный метод для преобразования byte[] в Sprite
+    //private Sprite ConvertToSprite(byte[] imageData)
+    //{
+    //    if (imageData.Length == 0)
+    //    {
+    //        Debug.LogWarning("Image data is empty.");
+    //        return null;
+    //    }
+
+    //    Texture2D texture = new Texture2D(2, 2);
+    //    if (texture.LoadImage(imageData))
+    //    {
+    //        return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+    //    }
+
+    //    Debug.LogWarning("Failed to create texture from image data.");
+    //    return null;
+    //}
 }

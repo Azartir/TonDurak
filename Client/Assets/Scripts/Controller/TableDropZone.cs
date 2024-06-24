@@ -12,14 +12,27 @@ public class TableDropZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Дополнительная логика при сбросе карты на зону
-        Card droppedCard = other.GetComponent<Card>();
-        if (droppedCard != null)
+        // Попробуем получить компонент Card из другого объекта
+        CardComponent droppedCardComponent = other.GetComponent<CardComponent>();
+
+        if (droppedCardComponent != null)
         {
+            // Получаем данные карты из компонента
+            SimpleCard droppedCard = droppedCardComponent.cardData;
+
             // Пример: обработка события сброса карты на стол
-            Debug.Log("Card dropped on the table: " + droppedCard.name);
+            Debug.Log("Card dropped on the table: " + droppedCard.ToString());
+
+            // Отключаем объект зоны сброса после сброса карты
             gameObject.SetActive(false);
+
             // Здесь можно добавить дополнительные действия, связанные с картой
+        }
+        else
+        {
+            // Если компонент CardComponent не найден, выводим предупреждение
+            Debug.LogWarning("CardComponent not found on collider: " + other.name);
         }
     }
 }
+
