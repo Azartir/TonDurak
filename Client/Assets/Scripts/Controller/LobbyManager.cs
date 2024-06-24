@@ -5,15 +5,13 @@ public class LobbyManager : MonoBehaviour, ILobbyInfoProvider
 {
     private Dictionary<int, string> playerNames = new Dictionary<int, string>
     {
-        { 1, "Player1" },
-        { 2, "Player2" },
-        { 3, "Player3" },
-        { 4, "Player4" }
+        { 1, "Igor" },
+        { 2, "Muerte" },
     };
 
     private SimpleCard trumbCard = new SimpleCard(Rank.Ace, Suit.Hearts);
 
-    private int playerCount = 4;
+    private int playerCount = 2;
 
     private int playerId = 1;
 
@@ -32,19 +30,15 @@ public class LobbyManager : MonoBehaviour, ILobbyInfoProvider
     private Dictionary<int, int> playerCardCounts = new Dictionary<int, int>
     {
         { 1, 5 },
-        { 2, 3 },
-        { 3, 4 },
-        { 4, 6 }
+        { 2, 2 }
     };
 
-    private int deckCardsCount = 20;
+    private int deckCardsCount = 0;
 
     private Dictionary<int, byte[]> playersIcon = new Dictionary<int, byte[]>
     {
         { 1, new byte[0] }, // В реальной ситуации здесь будут данные иконок в формате byte[]
-        { 2, new byte[0] },
-        { 3, new byte[0] },
-        { 4, new byte[0] }
+        { 2, new byte[0] }
     };
 
     public Dictionary<int, string> GetPlayerName()

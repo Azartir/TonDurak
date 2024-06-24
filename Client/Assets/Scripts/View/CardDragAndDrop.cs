@@ -6,28 +6,29 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
     private RectTransform cardRectTransform;
     private CanvasGroup canvasGroup;
-    private Vector3 originalPosition;
+    private Vector3 originalPosition; // Исходная позиция в начале перетаскивания
+    private Transform originalParent; // Исходный родительский объект в начале перетаскивания
     private Canvas canvas;
-    private Transform originalParent;
+    private bool isDragging;
 
     private void Start()
     {
         cardRectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        originalPosition = cardRectTransform.position;
 
         canvas = GetComponentInParent<Canvas>();
         if (canvas == null)
         {
             Debug.LogError("Canvas не найден на сцене. Убедитесь, что у вас есть Canvas в иерархии.");
         }
-
-        originalParent = transform.parent;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        originalPosition = cardRectTransform.position; // Запоминаем позицию в момент начала перетаскивания
+        originalParent = transform.parent; // Запоминаем родителя в момент начала перетаскивания
         canvasGroup.blocksRaycasts = false; // Отключаем Raycast, чтобы карта не блокировала события
+        isDragging = true; // Устанавливаем флаг перетаскивания
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -41,15 +42,19 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.blocksRaycasts = true; // Включаем Raycast обратно
+        canvasGroup.blocksRaycasts = true; // Включаем Raycast
+        isDragging = false; // Сбрасываем флаг перетаскивания
 
         // Проверка на наличие валидного объекта в результате Raycast
         if (eventData.pointerCurrentRaycast.gameObject != null)
         {
-            TableDropZone dropZone = eventData.pointerCurrentRaycast.gameObject.GetComponent<TableDropZone>();
-            if (dropZone != null)
+            GameObject hitObject = eventData.pointerCurrentRaycast.gameObject;
+
+            // Проверяем, попали ли мы в другой объект с тегом "Card"
+            if (hitObject.CompareTag("Card"))
             {
-                MoveCardToDropZone(dropZone);
+                // Перемещаем текущую карту на позицию другой карты
+                PlaceCardOnTop(hitObject);
             }
             else
             {
@@ -62,27 +67,33 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
-    private void MoveCardToDropZone(TableDropZone dropZone)
+    private void ResetCardPosition()
     {
-        // Анимация перемещения карты в новую позицию
-        cardRectTransform.DOMove(dropZone.GetDropPosition(), 0.3f).OnComplete(() =>
+        // Возвращаем карту на позицию, с которой её начали перетаскивать
+        cardRectTransform.DOMove(originalPosition, 0.3f).OnComplete(() =>
         {
-            // Устанавливаем нового родителя для карты
-            transform.SetParent(dropZone.transform, false);
-            transform.localPosition = Vector3.zero; // Обнуляем позицию относительно нового родителя
-            transform.localRotation = Quaternion.identity; // Сбрасываем поворот
-            transform.DORotate(new Vector3(0, 0, 25), 2f);
+            transform.SetParent(originalParent, false); // Возвращаем карту в исходного родителя
+            transform.localPosition = Vector3.zero; // Сбрасываем локальную позицию относительно родителя
+            transform.localRotation = Quaternion.identity; // Сбрасываем локальный поворот
         });
     }
 
-    private void ResetCardPosition()
+    private void PlaceCardOnTop(GameObject targetCard)
     {
-        // Возвращаем карту на исходную позицию
-        cardRectTransform.DOMove(originalPosition, 0.3f).OnComplete(() =>
+        // Устанавливаем текущую карту поверх другой карты
+        transform.SetParent(targetCard.transform.parent, true);
+        transform.SetAsLastSibling(); // Перемещаем текущую карту на передний план (последний элемент в иерархии)
+        cardRectTransform.position = targetCard.transform.position;
+        cardRectTransform.DORotate(new Vector3(0, 0, 30), 0.5f, RotateMode.WorldAxisAdd)  // или RotateMode.LocalAxisAdd, если нужен локальный поворот
+            .SetEase(Ease.OutQuad);
+    }
+
+    // Обработчик, чтобы вернуть карту на место, если она не была перетащена
+    private void LateUpdate()
+    {
+        if (!isDragging)
         {
-            transform.SetParent(originalParent, false); // Возвращаем исходного родителя
-            transform.localPosition = Vector3.zero; // Сбрасываем локальную позицию
-            transform.localRotation = Quaternion.identity; // Сбрасываем локальный поворот
-        });
+            originalPosition = cardRectTransform.position;
+        }
     }
 }

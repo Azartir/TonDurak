@@ -8,32 +8,50 @@ public class CardDealer : MonoBehaviour
     [SerializeField] private Transform dealPoint; // Точка, из которой раздаются карты
     [SerializeField] private float dealDuration = 0.5f; // Время анимации раздачи одной карты
     [SerializeField] private float cardSpacing = 100f; // Расстояние между картами
+    [SerializeField] private CardDataProvider cardDataProvider;
 
-    public void DealCards(string[] cardNames)
+    private void Start()
     {
-        if (hand == null || dealPoint == null || cardPool == null)
+        if (cardDataProvider == null)
         {
-            Debug.LogError("Hand, DealPoint or CardPool is not assigned.");
+            Debug.LogError("CardDataProvider is not assigned.");
             return;
         }
 
-        for (int i = 0; i < cardNames.Length; i++)
+        SimpleCard[] cardsToDeal = cardDataProvider.GetCardDeal();
+        DealCards(cardsToDeal);
+    }
+
+    public void DealCards(SimpleCard[] cards)
+    {
+        if (hand == null || dealPoint == null || cardPool == null)
         {
-            GameObject card = cardPool.GetCard(cardNames[i]);
-            if (card == null)
+            Debug.LogError("Hand, DealPoint, or CardPool is not assigned.");
+            return;
+        }
+
+        for (int i = 0; i < cards.Length; i++)
+        {
+            GameObject cardObject = cardPool.GetCard(cards[i].ToCardCode());
+            if (cardObject == null)
             {
-                Debug.LogWarning("Card " + cardNames[i] + " is not available in the pool.");
+                Debug.LogWarning("Card " + cards[i] + " is not available in the pool.");
                 continue;
             }
 
-            // Перемещаем карту к руке игрока
-            card.transform.position = dealPoint.position;
+            // Добавляем компонент CardDragAndDrop, если его нет
+            CardDragAndDrop dragAndDropComponent = cardObject.GetComponent<CardDragAndDrop>();
+            if (dragAndDropComponent == null)
+            {
+                dragAndDropComponent = cardObject.AddComponent<CardDragAndDrop>();
+            }
+
+            cardObject.transform.position = dealPoint.position;
             Vector3 targetPosition = hand.position + Vector3.right * cardSpacing * i;
 
-            // Анимация перемещения карты к руке игрока
-            card.transform.DOMove(targetPosition, dealDuration).SetEase(Ease.OutQuad).OnComplete(() =>
+            cardObject.transform.DOMove(targetPosition, dealDuration).SetEase(Ease.OutQuad).OnComplete(() =>
             {
-                card.transform.SetParent(hand, false);
+                cardObject.transform.SetParent(hand, false);
                 ArrangeCardsInLine();
             });
         }
@@ -48,9 +66,8 @@ public class CardDealer : MonoBehaviour
             Transform card = hand.GetChild(i);
             Vector3 newPosition = Vector3.right * cardSpacing * i;
 
-            // Устанавливаем позицию карты по горизонтали с учетом смещения
             card.localPosition = newPosition;
-            card.localRotation = Quaternion.identity; // Сбрасываем поворот
+            card.localRotation = Quaternion.identity;
         }
     }
 }
