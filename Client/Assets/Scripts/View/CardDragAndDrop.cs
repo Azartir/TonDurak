@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -84,8 +85,13 @@ public class CardDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.SetParent(targetCard.transform.parent, true);
         transform.SetAsLastSibling(); // Перемещаем текущую карту на передний план (последний элемент в иерархии)
         cardRectTransform.position = targetCard.transform.position;
-        cardRectTransform.DORotate(new Vector3(0, 0, 30), 0.5f, RotateMode.WorldAxisAdd)  // или RotateMode.LocalAxisAdd, если нужен локальный поворот
-            .SetEase(Ease.OutQuad);
+        targetCard.transform.DORotate(new Vector3(0, 0, 5), 0.5f, RotateMode.WorldAxisAdd).SetEase(Ease.OutQuad);
+        targetCard.transform.DOLocalMoveY(cardRectTransform.localPosition.y + 15, 0.5f).SetEase(Ease.OutQuad);
+        targetCard.transform.DOLocalMoveX(cardRectTransform.localPosition.x - 25, 0.2f).SetEase(Ease.OutQuad);
+        cardRectTransform.DORotate(new Vector3(0, 0, -10), 0.5f, RotateMode.WorldAxisAdd).SetEase(Ease.OutQuad);
+        cardRectTransform.DOLocalMoveY(cardRectTransform.localPosition.y - 30, 0.5f).SetEase(Ease.OutQuad);
+        cardRectTransform.DOLocalMoveX(cardRectTransform.localPosition.x + 25, 0.2f).SetEase(Ease.OutQuad);
+        this.enabled = false;
     }
 
     // Обработчик, чтобы вернуть карту на место, если она не была перетащена

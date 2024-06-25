@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class CardDealer : MonoBehaviour
 {
@@ -19,23 +20,30 @@ public class CardDealer : MonoBehaviour
         }
 
         SimpleCard[] cardsToDeal = cardDataProvider.GetCardDeal();
-        DealCards(cardsToDeal);
+        StartDealing(cardsToDeal);
     }
 
-    public void DealCards(SimpleCard[] cards)
+    public void StartDealing(SimpleCard[] cards)
+    {
+        StartCoroutine(DealCards(cards));
+    }
+
+    private IEnumerator DealCards(SimpleCard[] cards)
     {
         if (hand == null || dealPoint == null || cardPool == null)
         {
             Debug.LogError("Hand, DealPoint, or CardPool is not assigned.");
-            return;
+            yield break; // Останавливаем выполнение, если не все параметры назначены
         }
 
         for (int i = 0; i < cards.Length; i++)
         {
+            yield return new WaitForSeconds(1); // Задержка перед выдачей каждой карты
+
             GameObject cardObject = cardPool.GetCard(cards[i].ToCardCode());
             if (cardObject == null)
             {
-                Debug.LogWarning("Card " + cards[i] + " is not available in the pool.");
+                Debug.LogWarning($"Card {cards[i]} is not available in the pool.");
                 continue;
             }
 
@@ -46,14 +54,21 @@ public class CardDealer : MonoBehaviour
                 dragAndDropComponent = cardObject.AddComponent<CardDragAndDrop>();
             }
 
+            // Устанавливаем начальную позицию карты
             cardObject.transform.position = dealPoint.position;
+
+            // Рассчитываем целевую позицию
             Vector3 targetPosition = hand.position + Vector3.right * cardSpacing * i;
 
-            cardObject.transform.DOMove(targetPosition, dealDuration).SetEase(Ease.OutQuad).OnComplete(() =>
-            {
-                cardObject.transform.SetParent(hand, false);
-                ArrangeCardsInLine();
-            });
+            // Перемещаем карту
+            cardObject.transform.DOMove(targetPosition, dealDuration)
+                .SetEase(Ease.OutQuad)
+                .OnComplete(() =>
+                {
+                    // Устанавливаем родителя и устраиваем карты в линии
+                    cardObject.transform.SetParent(hand, false);
+                    ArrangeCardsInLine();
+                });
         }
     }
 
