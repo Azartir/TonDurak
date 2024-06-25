@@ -1,0 +1,46 @@
+name: Deploy to server
+
+on: push
+
+jobs:
+  buildWebGL:
+    name: Build for Linux 🖥️
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    if: github.ref == 'refs/heads/test'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENCE }}
+        with:
+          targetPlatform: StandaloneLinux64
+          projectPath: ./Server
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: build
+
+      - name: copy build to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 158.160.168.4
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "./build/"
+          target: "/home/egor/"
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 158.160.168.4
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: sudo systemctl restart UnityServer
